@@ -141,7 +141,7 @@ export class HttpConnection extends ThriftConnection<CoreOptions> {
             url: this.url,
             headers: {
                 'Content-Length': dataToWrite.length,
-                'Content-Type': 'application/octet-stream',
+                'Content-Type': `application/x-thrift;protocol=${this.protocol}`,
             },
         })
 
